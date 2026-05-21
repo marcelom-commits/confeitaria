@@ -1,0 +1,31 @@
+import Link from "next/link";
+
+type CategoryCardProps = {
+  name: string;
+  description: string;
+  image: string;
+};
+
+export function CategoryCard({
+  name,
+  description,
+  image,
+}: CategoryCardProps) {
+  return (
+    <Link href={`/catalogo?categoria=${encodeURIComponent(name)}`} className="block">
+      <article className="group overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+        <div
+          className="h-64 bg-cover bg-center"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+        <div className="space-y-3 p-6">
+          <h3 className="font-serif text-2xl text-stone-900">{name}</h3>
+          <p className="text-sm leading-6 text-stone-600">{description}</p>
+          <span className="inline-flex text-sm font-semibold text-rose-700 group-hover:underline">
+            Explorar categoria
+          </span>
+        </div>
+      </article>
+    </Link>
+  );
+}

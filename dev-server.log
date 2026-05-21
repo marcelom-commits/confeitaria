@@ -1,0 +1,910 @@
+﻿   Ôû▓ Next.js 15.3.2
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.15.141:3000
+   - Environments: .env
+
+ Ô£ô Starting...
+ Ô£ô Ready in 4.1s
+ Ôùï Compiling / ...
+ Ô£ô Compiled / in 9.2s (766 modules)
+ GET / 200 in 10315ms
+ GET / 200 in 136ms
+ Ôùï Compiling /checkout ...
+ Ô£ô Compiled /checkout in 1322ms (788 modules)
+ GET /checkout 307 in 1793ms
+ Ôùï Compiling /admin ...
+ Ô£ô Compiled /admin in 2.1s (916 modules)
+ GET /admin 307 in 2742ms
+ GET /checkout 307 in 415ms
+ GET /checkout 307 in 223ms
+ GET / 200 in 236ms
+ Ôùï Compiling /api/auth/[...nextauth] ...
+ Ô£ô Compiled /api/auth/[...nextauth] in 686ms (905 modules)
+ Ô£ô Compiled /carrinho in 478ms (916 modules)
+ GET /carrinho 200 in 736ms
+ GET /api/auth/session 200 in 3304ms
+ GET /api/auth/session 200 in 147ms
+ GET / 200 in 385ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/session 200 in 16ms
+ Ô£ô Compiled /admin in 203ms (598 modules)
+ GET /admin 200 in 514ms
+ Ôùï Compiling /api/admin/shipping-tokens ...
+ Ô£ô Compiled /api/admin/shipping-tokens in 565ms (926 modules)
+ POST /api/admin/shipping-tokens 200 in 826ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 12ms
+ Ô£ô Compiled /checkout in 454ms (607 modules)
+ GET /checkout 200 in 637ms
+ GET /api/auth/session 200 in 101ms
+ GET /api/auth/session 200 in 16ms
+ GET /api/auth/session 200 in 12ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 19ms
+ Ôùï Compiling /api/shipping/validate-token ...
+ Ô£ô Compiled /api/shipping/validate-token in 680ms (935 modules)
+ POST /api/shipping/validate-token 200 in 821ms
+ Ô£ô Compiled in 924ms (939 modules)
+ GET /checkout 200 in 244ms
+node.exe : Only plain objects can be passed to Client Components from Server Components. Decimal objects are not 
+supported.
+No linha:1 caractere:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Only plain obje... not supported.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 342ms
+ Ôùï Compiling /api/auth/[...nextauth] ...
+ Ô£ô Compiled /api/auth/[...nextauth] in 850ms (605 modules)
+ GET /api/auth/session 200 in 1730ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/session 200 in 15ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 13ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 334ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 13ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/auth/session 200 in 13ms
+ GET /api/auth/session 200 in 13ms
+ Ô£ô Compiled in 1259ms (939 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /checkout 200 in 467ms
+ GET /admin 200 in 470ms
+ Ô£ô Compiled in 914ms (939 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /checkout 200 in 385ms
+ GET /admin 200 in 396ms
+ Ô£ô Compiled in 773ms (939 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /checkout 200 in 408ms
+ GET /admin 200 in 407ms
+ Ô£ô Compiled in 267ms (340 modules)
+ GET /checkout 200 in 358ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 91ms
+ Ô£ô Compiled in 258ms (340 modules)
+ GET /checkout 200 in 183ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 66ms
+ Ô£ô Compiled in 259ms (340 modules)
+ GET /checkout 200 in 80ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 65ms
+ Ô£ô Compiled in 308ms (340 modules)
+ GET /checkout 200 in 135ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 68ms
+ Ô£ô Compiled in 248ms (340 modules)
+ GET /checkout 200 in 97ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 65ms
+ Ô£ô Compiled /api/auth/[...nextauth] in 365ms (605 modules)
+ GET /api/auth/session 200 in 629ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 12ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {token: ..., price: Decimal, isUsed: ..., orderId: ..., createdAt: ..., usedAt: ...}
+                      ^^^^^^^
+ GET /admin 200 in 356ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 16ms
+ GET /api/auth/session 200 in 18ms
+ Ôùï Compiling /api/admin/shipping-tokens ...
+ Ô£ô Compiled /api/admin/shipping-tokens in 571ms (607 modules)
+ POST /api/admin/shipping-tokens 200 in 780ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 12ms
+ Ô£ô Compiled /api/shipping/validate-token in 335ms (609 modules)
+ POST /api/shipping/validate-token 200 in 392ms
+ Ôùï Compiling /api/checkout/place-order ...
+ Ô£ô Compiled /api/checkout/place-order in 779ms (941 modules)
+ POST /api/checkout/place-order 200 in 1176ms
+ Ô£ô Compiled /api/payments/mock-callback in 432ms (943 modules)
+ GET /api/payments/mock-callback?orderId=cmpfq3mk2000auspwrwznelot 307 in 524ms
+ Ôùï Compiling /checkout/sucesso ...
+ Ô£ô Compiled /checkout/sucesso in 513ms (945 modules)
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 921ms
+ GET /api/auth/session 200 in 113ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 15ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 14ms
+ GET /api/auth/session 200 in 13ms
+ Ôùï Compiling /admin/pedidos ...
+ Ô£ô Compiled /admin/pedidos in 766ms (953 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 1000ms
+ Ô£ô Compiled in 1743ms (938 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 563ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 564ms
+ Ô£ô Compiled in 648ms (938 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 598ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 780ms
+ Ô£ô Compiled in 671ms (938 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 317ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 75ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 167ms
+ Ô£ô Compiled /api/auth/[...nextauth] in 275ms (600 modules)
+ GET /api/auth/session 200 in 509ms
+ GET /api/auth/session 200 in 12ms
+ GET /api/auth/session 200 in 12ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 254ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/session 200 in 13ms
+ Ôùï Compiling /admin/categorias ...
+ Ô£ô Compiled /admin/categorias in 950ms (936 modules)
+ GET /admin/categorias 200 in 1265ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: Decimal, shippingCost: ..., total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: Decimal, total: ..., notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                           ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., userId: ..., customerProfileId: ..., status: ..., subtotal: ..., shippingCost: ..., total: Decimal, notes: 
+..., recipientName: ..., street: ..., number: ..., complement: ..., district: ..., city: ..., state: ..., zipCode: 
+..., createdAt: ..., updatedAt: ..., items: ..., user: ..., payment: ..., shipment: ...}
+                                                                                                       ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: Decimal, totalPrice: ...}
+                                                                                                                       
+        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., productId: ..., productVariantId: ..., productName: ..., variantName: ..., quantity: ..., 
+unitPrice: ..., totalPrice: Decimal}
+                                                                                                                       
+                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., gateway: ..., gatewayPaymentId: ..., method: ..., amount: Decimal, status: ..., paidAt: ..., 
+rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                    ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., orderId: ..., shippingMethod: ..., carrier: ..., trackingCode: ..., shippingCost: Decimal, estimatedDays: 
+..., status: ..., postedAt: ..., deliveredAt: ..., rawResponse: ..., createdAt: ..., updatedAt: ...}
+                                                                                              ^^^^^^^
+ GET /admin/pedidos 200 in 33ms
+ Ô£ô Compiled in 1436ms (939 modules)
+ GET /admin/pedidos 200 in 537ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 539ms
+ Ô£ô Compiled in 567ms (939 modules)
+ GET /admin/pedidos 200 in 235ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 236ms
+ GET /admin/pedidos 200 in 206ms
+ Ô¿» Error: Cannot find module './4447.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\swc\options.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\swc\index.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\config.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\next.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\lib\start-server.js
+    at __webpack_require__.f.require 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:203:28)
+    at <unknown> (C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:167:22)
+    at <unknown> 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js:1:13574)
+    at Object.<anonymous> 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js:1:13651) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/admin/categorias'
+}
+ Ôùï Compiling /_error ...
+ Ô¿» Error: Cannot find module './4447.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\swc\options.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\swc\index.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\config.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\next.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\lib\start-server.js
+    at __webpack_require__.f.require 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:203:28)
+    at <unknown> (C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js:167:22)
+    at <unknown> (C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\page.js:1:12388)
+    at Object.<anonymous> 
+(C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\page.js:1:12465) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/admin'
+}
+ GET /admin/pedidos 200 in 815ms
+ Ô£ô Compiled /admin/produtos in 9.8s (1267 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., categoryId: ..., name: ..., slug: ..., description: ..., price: Decimal, compareAtPrice: ..., sku: ..., 
+stock: ..., weightGrams: ..., isActive: ..., isFeatured: ..., createdAt: ..., updatedAt: ..., category: ..., images: 
+...}
+                                                                            ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., categoryId: ..., name: ..., slug: ..., description: ..., price: Decimal, compareAtPrice: ..., sku: ..., 
+stock: ..., weightGrams: ..., isActive: ..., isFeatured: ..., createdAt: ..., updatedAt: ..., category: ..., images: 
+...}
+                                                                            ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., categoryId: ..., name: ..., slug: ..., description: ..., price: Decimal, compareAtPrice: ..., sku: ..., 
+stock: ..., weightGrams: ..., isActive: ..., isFeatured: ..., createdAt: ..., updatedAt: ..., category: ..., images: 
+...}
+                                                                            ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., categoryId: ..., name: ..., slug: ..., description: ..., price: Decimal, compareAtPrice: ..., sku: ..., 
+stock: ..., weightGrams: ..., isActive: ..., isFeatured: ..., createdAt: ..., updatedAt: ..., category: ..., images: 
+...}
+                                                                            ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., categoryId: ..., name: ..., slug: ..., description: ..., price: Decimal, compareAtPrice: ..., sku: ..., 
+stock: ..., weightGrams: ..., isActive: ..., isFeatured: ..., createdAt: ..., updatedAt: ..., category: ..., images: 
+...}
+                                                                            ^^^^^^^
+ GET /admin/categorias 500 in 12230ms
+ GET /admin 500 in 10145ms
+ GET /admin/produtos 200 in 11154ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 7441ms
+ GET /checkout/sucesso?orderId=cmpfq3mk2000auspwrwznelot 200 in 119ms
+ Ôùï Compiling /_not-found ...
+ Ô£ô Compiled /_not-found in 2.5s (1271 modules)
+ GET /_next/static/css/app/layout.css?v=1779382298390 404 in 3008ms
+ Ôùï Compiling /api/admin/orders/[id]/status ...
+ Ô£ô Compiled /api/admin/orders/[id]/status in 875ms (1226 modules)
+ Ô¿» [Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\admin\orders\[id]\status\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/admin/orders/cmpfq3mk2000auspwrwznelot/status'
+}
+ Ôùï Compiling /_error ...
+ Ô£ô Compiled /_error in 509ms (1269 modules)
+ PUT /api/admin/orders/cmpfq3mk2000auspwrwznelot/status 500 in 2609ms
+ Ôùï Compiling /api/auth/[...nextauth] ...
+ Ô£ô Compiled /api/auth/[...nextauth] in 923ms (688 modules)
+ GET /api/auth/session 200 in 1289ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/session 200 in 16ms
+ Ô¿» Failed to generate static paths for /api/auth/[...nextauth]:
+[Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\auth\[...nextauth]\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ Ô¿» Failed to generate static paths for /api/auth/[...nextauth]:
+[Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\auth\[...nextauth]\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ Ô¿» Failed to generate static paths for /api/auth/[...nextauth]:
+[Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\auth\[...nextauth]\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ Ôùï Compiling / ...
+ Ô£ô Compiled / in 1403ms (702 modules)
+ GET / 200 in 2166ms
+ Ôùï Compiling /_not-found ...
+ Ô£ô Compiled /_not-found in 649ms (1285 modules)
+ GET /_next/static/css/app/layout.css?v=1779382405310 404 in 925ms
+ GET /_next/static/chunks/main-app.js?v=1779382405310 404 in 915ms
+ GET /_next/static/chunks/app/layout.js 404 in 121ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 125ms
+ GET /_next/static/chunks/app/(store)/page.js 404 in 123ms
+ Ô¿» [Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\auth\[...nextauth]\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/session'
+}
+ GET /api/auth/session 500 in 803ms
+ Ô¿» [Error: Cannot find module './vendor-chunks/@auth.js'
+Require stack:
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\webpack-runtime.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\api\auth\[...nextauth]\route.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\require.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\load-components.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\build\utils.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\server\dev\static-paths-worker.js
+- C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\node_modules\next\dist\compiled\jest-worker\processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/auth/session'
+}
+ GET /api/auth/session 500 in 730ms
+   Reload env: .env
+ Ô£ô Compiled in 2.5s (1218 modules)
+ GET /admin/pedidos 200 in 517ms
+ Ôùï Compiling /_not-found ...
+ Ô£ô Compiled /_not-found in 873ms (1222 modules)
+ GET /_next/static/css/app/layout.css?v=1779382517722 404 in 1246ms
+ Ôùï Compiling /_error ...
+ Ô£ô Compiled /_error in 1060ms (1265 modules)
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 5234ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\pedidos\\page.js',
+  page: '/admin/pedidos'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 80ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\pedidos\\page.js',
+  page: '/admin/pedidos'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 85ms
+ Ô£ô Compiled / in 506ms (696 modules)
+ GET / 200 in 868ms
+ Ôùï Compiling /_not-found ...
+ Ô£ô Compiled /_not-found in 656ms (1279 modules)
+ GET /_next/static/css/app/layout.css?v=1779382939757 404 in 902ms
+ ÔÜá Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/chunks/main-app.js?v=1779382939757 404 in 899ms
+ GET /_next/static/webpack/214a358af225c5dd.webpack.hot-update.json 404 in 562ms
+ GET /_next/static/chunks/app/layout.js 404 in 109ms
+ GET /_next/static/chunks/app/(store)/page.js 404 in 109ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 111ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\pedidos\\page.js',
+  page: '/admin/pedidos'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 178ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\pedidos\\page.js',
+  page: '/admin/pedidos'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 133ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\categorias\\page.js',
+  page: '/admin/categorias'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/categorias 500 in 107ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\pedidos\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\pedidos\\page.js',
+  page: '/admin/pedidos'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/pedidos 500 in 76ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\categorias\\page.js',
+  page: '/admin/categorias'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/categorias 500 in 72ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\categorias\\page.js',
+  page: '/admin/categorias'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/categorias 500 in 84ms
+ GET /_next/static/css/app/layout.css?v=1779382989530 404 in 61ms
+ GET / 200 in 342ms
+ GET /_next/static/chunks/main-app.js?v=1779382989530 404 in 130ms
+ GET /_next/static/chunks/app/layout.js 404 in 126ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 130ms
+ GET /_next/static/chunks/app/(store)/page.js 404 in 126ms
+ Ôùï Compiling /catalogo ...
+ Ô£ô Compiled /catalogo in 1201ms (1284 modules)
+ ÔÜá Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/webpack/214a358af225c5dd.webpack.hot-update.json 404 in 253ms
+ GET /_next/static/css/app/layout.css?v=1779382993999 404 in 72ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app\admin\categorias\page.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app\\admin\\categorias\\page.js',
+  page: '/admin/categorias'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages\\_document.js'
+}
+ GET /admin/categorias 500 in 264ms
+ GET /catalogo 200 in 1716ms
+ GET /_next/static/chunks/main-app.js?v=1779382993999 404 in 281ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 153ms
+ GET /_next/static/chunks/app/layout.js 404 in 153ms
+ GET /_next/static/chunks/app/(store)/page.js 404 in 154ms
+ GET /_next/static/css/app/layout.css?v=1779383042430 404 in 49ms
+ GET /catalogo 200 in 186ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 140ms
+ GET /_next/static/chunks/app/layout.js 404 in 139ms
+ GET /_next/static/chunks/main-app.js?v=1779383042430 404 in 158ms
+ GET /_next/static/chunks/app/(store)/page.js 404 in 140ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json',
+  page: '/catalogo'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\pages-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\pages-manifest.json'
+}
+ GET /catalogo 500 in 101ms
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json'
+}
+ Ô¿» [Error: ENOENT: no such file or directory, open 
+'C:\Users\ONYX-SOLUTION\Projects\confeitaria-ecommerce\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\ONYX-SOLUTION\\Projects\\confeitaria-ecommerce\\.next\\server\\app-paths-manifest.json'
+}
+ GET /_next/static/chunks/fallback/webpack.js 500 in 146ms
+ GET /_next/static/chunks/fallback/main.js 500 in 145ms
+ GET /_next/static/chunks/fallback/pages/_error.js 500 in 143ms
+ GET /_next/static/chunks/fallback/react-refresh.js 500 in 142ms
+ GET /_next/static/chunks/fallback/pages/_app.js 500 in 141ms
+ GET / 404 in 238ms
+ GET / 404 in 218ms
+ GET / 404 in 238ms
+ GET / 404 in 223ms
+ GET / 404 in 223ms
+ GET / 404 in 246ms
+ GET / 404 in 231ms
+ GET / 404 in 237ms
+ GET / 404 in 232ms
+ GET / 404 in 238ms
+ GET / 404 in 239ms
+ GET / 404 in 238ms
+ GET / 404 in 237ms
+ GET / 404 in 231ms
+ GET / 404 in 233ms
+ GET / 404 in 238ms
+ GET / 404 in 221ms
+ GET / 404 in 236ms
+ Ô¿» [TypeError: Cannot read properties of undefined (reading 'clientModules')] {
+  page: '/'
+}
+ GET / 500 in 634ms
+ Ô¿» [TypeError: Cannot read properties of undefined (reading 'clientModules')] {
+  page: '/'
+}
+ GET / 500 in 598ms
+ Ô£ô Compiled in 1907ms (1276 modules)
+   Reload env: .env.local
+ Ô£ô Compiled in 1922ms (1276 modules)
+ Ô¿» ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js:11:1
+Module not found: Can't resolve 'react-server-dom-webpack/server'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/components/error-boundary.js
