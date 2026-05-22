@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { formatPrice } from "@/lib/format";
+import { formatPrice, orderStatusLabels } from "@/lib/format";
 import { getCustomerAccountData } from "@/lib/account";
 import { requireUser } from "@/lib/access";
 
@@ -43,7 +43,7 @@ export default async function AccountOrdersPage() {
                     Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
                   </p>
                   <p className="text-sm text-stone-600">
-                    Status: {order.status} ·{" "}
+                    Status: {orderStatusLabels[order.status] ?? order.status} ·{" "}
                     {new Date(order.createdAt).toLocaleString("pt-BR")}
                   </p>
                 </div>

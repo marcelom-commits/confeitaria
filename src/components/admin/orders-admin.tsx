@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { formatPrice } from "@/lib/format";
+import { formatPrice, orderStatusLabels } from "@/lib/format";
 
 type Order = {
   id: string;
@@ -30,12 +30,7 @@ const statuses = [
 
 const statusLabels: Record<string, string> = {
   ALL: "Todos",
-  PENDING: "Pendente",
-  PAID: "Pago",
-  PREPARING: "Preparando",
-  SHIPPED: "Enviado",
-  DELIVERED: "Entregue",
-  CANCELED: "Cancelado",
+  ...orderStatusLabels,
 };
 
 export function OrdersAdmin({ initialOrders }: Props) {

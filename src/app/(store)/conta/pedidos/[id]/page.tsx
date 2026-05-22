@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { formatPrice } from "@/lib/format";
+import { formatPrice, orderStatusLabels, paymentStatusLabels } from "@/lib/format";
 import { requireUser } from "@/lib/access";
 import { prisma } from "@/lib/prisma";
 
@@ -54,12 +54,12 @@ export default async function AccountOrderDetailPage(props: {
 
       <section className="rounded-2xl border border-stone-200 p-5">
         <p className="text-sm text-stone-600">
-          Status: <span className="font-semibold text-stone-900">{order.status}</span>
+          Status: <span className="font-semibold text-stone-900">{orderStatusLabels[order.status] ?? order.status}</span>
         </p>
         <p className="text-sm text-stone-600">
           Pagamento:{" "}
           <span className="font-semibold text-stone-900">
-            {order.payment?.status ?? "PENDING"}
+            {paymentStatusLabels[order.payment?.status ?? ""] ?? order.payment?.status ?? "Pendente"}
           </span>
         </p>
         {paymentUrl ? (
