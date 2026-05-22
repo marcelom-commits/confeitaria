@@ -28,6 +28,14 @@ export default async function AccountOrderDetailPage(props: {
 
   if (!order) notFound();
 
+  const paymentUrl =
+    order.payment?.method === "pix" &&
+    order.payment?.status === "PENDING" &&
+    typeof order.payment?.rawResponse === "object" &&
+    order.payment?.rawResponse !== null
+      ? ((order.payment.rawResponse as Record<string, unknown>)?.initPoint as string | undefined)
+      : null;
+
   return (
     <div className="space-y-6">
       <header>
@@ -49,6 +57,14 @@ export default async function AccountOrderDetailPage(props: {
             {order.payment?.status ?? "PENDING"}
           </span>
         </p>
+        {paymentUrl ? (
+          <a
+            href={paymentUrl}
+            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-medium text-white hover:bg-green-700"
+          >
+            Pagar com PIX
+          </a>
+        ) : null}
       </section>
 
       <section className="rounded-2xl border border-stone-200 p-5">

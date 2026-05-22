@@ -185,7 +185,11 @@ export async function createOrderAndPayment(payload: CheckoutPayload) {
         method: payload.payment.method,
         amount: new Prisma.Decimal(total),
         status: PaymentStatus.PENDING,
-        rawResponse: preference.raw as Prisma.JsonObject,
+        rawResponse: {
+          ...(preference.raw as Record<string, unknown>),
+          initPoint: preference.initPoint,
+          isMock: preference.isMock,
+        } as Prisma.JsonObject,
       },
     });
 
