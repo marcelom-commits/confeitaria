@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { requireAdmin } from "@/lib/access";
-
 export const dynamic = "force-dynamic";
 
 const nav = [

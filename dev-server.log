@@ -908,3 +908,18 @@ https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./node_modules/next/dist/client/components/error-boundary.js
+ Ôùï Compiling /api/payments/mock-callback ...
+ Ô¿» ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js:11:1
+Module not found: Can't resolve 'react-server-dom-webpack/server'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/components/error-boundary.js
+ Ô¿» ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js:11:1
+Module not found: Can't resolve 'react-server-dom-webpack/server'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/components/error-boundary.js
