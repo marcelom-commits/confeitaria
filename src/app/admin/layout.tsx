@@ -15,8 +15,6 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  await requireAdmin();
-
   return (
     <main className="min-h-screen bg-stone-100 px-4 py-6 sm:px-6">
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[260px_1fr]">
