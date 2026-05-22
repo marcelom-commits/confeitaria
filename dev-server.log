@@ -1125,3 +1125,13 @@ Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL
 Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
  Ô¿» src\app\(store)\checkout\page.tsx
 Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
+ Ô£ô Compiled / in 1753ms (434 modules)
+ Ô£ô Compiled in 375ms (434 modules)
+ Ô£ô Compiled in 450ms (434 modules)
+   Reload env: .env
+ Ô¿» src\app\(store)\checkout\page.tsx
+Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
+ Ô£ô Compiled in 1124ms (434 modules)
+ Ô£ô Compiled in 615ms (434 modules)
+ Ô£ô Compiled in 703ms (434 modules)
+ Ô£ô Compiled in 784ms (434 modules)

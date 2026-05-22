@@ -3,7 +3,7 @@ import QRCode from "qrcode";
 
 import { prisma } from "@/lib/prisma";
 import { PixPaymentInfo } from "@/components/store/pix-payment-info";
-import { formatPrice } from "@/lib/format";
+import { buildPixBRCode } from "@/lib/pix-brcode";
 
 export const dynamic = "force-dynamic";
 
@@ -37,8 +37,15 @@ export default async function CheckoutPendingPage(props: {
     pixKey = (raw?.pixKey as string) ?? process.env.NEXT_PUBLIC_PIX_KEY ?? "";
     pixKeyType = (raw?.pixKeyType as string) ?? process.env.NEXT_PUBLIC_PIX_KEY_TYPE ?? "telefone";
     pixReceiver = (raw?.pixReceiver as string) ?? process.env.NEXT_PUBLIC_PIX_RECEIVER ?? "";
+    const amount = Number(order.total);
     try {
-      qrCodeDataUrl = await QRCode.toDataURL(pixKey, { width: 300, margin: 2 });
+      const pixBRCode = buildPixBRCode({
+        pixKey,
+        merchantName: pixReceiver || "Doce Encanto",
+        merchantCity: "Brasilia",
+        amount,
+      });
+      qrCodeDataUrl = await QRCode.toDataURL(pixBRCode, { width: 300, margin: 2 });
     } catch {
       qrCodeDataUrl = null;
     }
