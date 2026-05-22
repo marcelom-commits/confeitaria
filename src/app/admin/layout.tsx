@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { signOut } from "next-auth/react";
 
 const nav = [
   { href: "/admin", label: "Dashboard" },
@@ -61,8 +62,14 @@ export default function AdminLayout({
               </Link>
             ))}
           </nav>
-        </aside>
-        <section className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+          <button
+            onClick={() => signOut({ callbackUrl: "/" })}
+            className="mt-6 w-full rounded-xl border border-red-200 px-3 py-2 text-sm text-red-600 hover:bg-red-50"
+          >
+            Sair
+          </button>
+          </aside>
+          <section className="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
           {children}
         </section>
       </div>
