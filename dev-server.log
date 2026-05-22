@@ -962,3 +962,12 @@ https://nextjs.org/docs/messages/module-not-found
 Import trace for requested module:
 ./node_modules/next/dist/client/components/error-boundary.js
  Ô£ô Compiled in 542ms (448 modules)
+ Ô£ô Compiled in 1128ms (448 modules)
+ Ô£ô Compiled in 598ms (448 modules)
+ Ô¿» ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js:11:1
+Module not found: Can't resolve 'react-server-dom-webpack/server'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/components/error-boundary.js
