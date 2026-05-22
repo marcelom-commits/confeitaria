@@ -196,6 +196,10 @@ export function CheckoutFlow({ items, subtotal }: Props) {
         window.location.href = data.payment.initPoint;
         return;
       }
+      if (paymentMethod === "pix" && data.orderId) {
+        window.location.href = `/checkout/pendente?orderId=${data.orderId}`;
+        return;
+      }
       window.location.href = `/checkout/sucesso?orderId=${data.orderId ?? ""}`;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Erro inesperado.");

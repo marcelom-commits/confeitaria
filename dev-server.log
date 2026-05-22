@@ -1120,3 +1120,8 @@ Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL
  Ô£ô Compiled in 664ms (434 modules)
  Ô¿» src\app\(store)\checkout\page.tsx
 Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
+ Ôùï Compiling / ...
+ Ô¿» src\app\(store)\checkout\page.tsx
+Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
+ Ô¿» src\app\(store)\checkout\page.tsx
+Invariant: Expected to replace all template variables, missing VAR_MODULE_GLOBAL_ERROR in template
