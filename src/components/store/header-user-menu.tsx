@@ -4,7 +4,7 @@ import Link from "next/link";
 import { signOut } from "next-auth/react";
 
 type Props = {
-  userName: string | null;
+  userName: string | null | undefined;
   role: string;
 };
 
