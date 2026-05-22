@@ -28,13 +28,18 @@ export default async function AccountOrderDetailPage(props: {
 
   if (!order) notFound();
 
-  const paymentUrl =
-    order.payment?.method === "pix" &&
-    order.payment?.status === "PENDING" &&
-    typeof order.payment?.rawResponse === "object" &&
-    order.payment?.rawResponse !== null
-      ? ((order.payment.rawResponse as Record<string, unknown>)?.initPoint as string | undefined)
-      : null;
+  const isPixPending =
+    order.payment?.method === "pix" && order.payment?.status === "PENDING";
+
+  let paymentUrl: string | null = null;
+  if (isPixPending) {
+    const raw = order.payment?.rawResponse as Record<string, unknown> | null;
+    paymentUrl = (raw?.initPoint as string | undefined) ?? null;
+    if (!paymentUrl) {
+      const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+      paymentUrl = `${baseUrl}/api/payments/mock-callback?orderId=${order.id}`;
+    }
+  }
 
   return (
     <div className="space-y-6">
