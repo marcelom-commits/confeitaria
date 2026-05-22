@@ -3,16 +3,16 @@ import { getPixSettings, upsertPixSettings } from "@/lib/store-settings";
 import { requireAdminApi } from "@/lib/access";
 
 export async function GET() {
-  const auth = await requireAdminApi();
-  if (auth) return auth;
+  const adminCheck = await requireAdminApi();
+  if ("error" in adminCheck) return adminCheck.error;
 
   const settings = await getPixSettings();
   return NextResponse.json(settings);
 }
 
 export async function PUT(request: NextRequest) {
-  const auth = await requireAdminApi();
-  if (auth) return auth;
+  const adminCheck = await requireAdminApi();
+  if ("error" in adminCheck) return adminCheck.error;
 
   const body = (await request.json()) as {
     pixKey?: string;
