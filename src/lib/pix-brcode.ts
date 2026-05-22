@@ -1,5 +1,4 @@
-import { createStaticPix, hasError } from "pix-utils";
-import type { PixStaticObject } from "pix-utils/dist/module/types/pixElements";
+import { QrCodePix } from "qrcode-pix";
 
 export function buildPixBRCode(payload: {
   pixKey: string;
@@ -8,17 +7,14 @@ export function buildPixBRCode(payload: {
   amount: number;
   txid?: string;
 }): string {
-  const pix = createStaticPix({
-    pixKey: payload.pixKey,
-    merchantName: payload.merchantName.trim().substring(0, 25),
-    merchantCity: payload.merchantCity.trim().substring(0, 15),
-    transactionAmount: payload.amount,
-    txid: payload.txid ?? "***",
+  const pix = QrCodePix({
+    version: "01",
+    key: payload.pixKey,
+    name: payload.merchantName,
+    city: payload.merchantCity,
+    value: payload.amount,
+    transactionId: payload.txid ?? "***",
   });
 
-  if (hasError(pix)) {
-    throw new Error("Erro ao gerar BR Code PIX");
-  }
-
-  return (pix as PixStaticObject).toBRCode();
+  return pix.payload();
 }
