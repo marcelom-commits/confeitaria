@@ -48,7 +48,7 @@ export default async function AccountOrderDetailPage(props: {
           pedido
         </p>
         <h1 className="mt-3 font-serif text-4xl text-stone-900">
-          Detalhe do pedido {order.id.slice(0, 8)}
+          Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
         </h1>
       </header>
 

@@ -170,6 +170,7 @@ model CartItem {
 
 model Order {
   id                String          @id @default(cuid())
+  orderNumber       Int             @default(0)
   userId            String?
   customerProfileId String?
   status            OrderStatus     @default(PENDING)

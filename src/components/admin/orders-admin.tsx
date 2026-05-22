@@ -6,6 +6,7 @@ import { formatPrice } from "@/lib/format";
 
 type Order = {
   id: string;
+  orderNumber: number;
   status: string;
   total: number;
   createdAt: string | Date;
@@ -103,7 +104,7 @@ export function OrdersAdmin({ initialOrders }: Props) {
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <p className="font-semibold text-stone-900">
-                  Pedido #{String(index + 1).padStart(5, "0")}
+                  Pedido #{String(order.orderNumber ?? index + 1).padStart(5, "0")}
                 </p>
                 <p className="text-sm text-stone-600">
                   {order.user?.name ?? "Cliente"} · {order.user?.email ?? "sem email"}

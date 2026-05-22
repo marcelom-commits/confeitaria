@@ -124,10 +124,17 @@ export async function createOrderAndPayment(payload: CheckoutPayload) {
       customerProfileId = guestUser.customerProfile?.id ?? null;
     }
 
+    const lastOrder = await tx.order.findFirst({
+      orderBy: { orderNumber: "desc" },
+      select: { orderNumber: true },
+    });
+    const nextNumber = (lastOrder?.orderNumber ?? 0) + 1;
+
     const created = await tx.order.create({
       data: {
         userId,
         customerProfileId,
+        orderNumber: nextNumber,
         status: "PENDING",
         subtotal: new Prisma.Decimal(subtotal),
         shippingCost: new Prisma.Decimal(shippingCost),

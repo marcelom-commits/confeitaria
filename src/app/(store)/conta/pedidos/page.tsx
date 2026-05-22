@@ -40,7 +40,7 @@ export default async function AccountOrdersPage() {
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <p className="font-semibold text-stone-900">
-                    Pedido {order.id.slice(0, 8)}
+                    Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
                   </p>
                   <p className="text-sm text-stone-600">
                     Status: {order.status} ·{" "}
