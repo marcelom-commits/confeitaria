@@ -116,7 +116,21 @@ export function OrdersAdmin({ initialOrders }: Props) {
                 <p className="font-semibold text-stone-900">
                   {formatPrice(Number(order.total))}
                 </p>
-                <p className="text-sm text-stone-600">Status: {statusLabels[order.status] ?? order.status}</p>
+                <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
+                  order.status === "PENDING"
+                    ? "bg-orange-100 text-orange-800"
+                    : order.status === "PAID"
+                      ? "bg-green-100 text-green-800"
+                      : order.status === "PREPARING"
+                        ? "bg-blue-100 text-blue-800"
+                        : order.status === "DELIVERED"
+                          ? "bg-emerald-100 text-emerald-800"
+                          : order.status === "CANCELED"
+                            ? "bg-red-100 text-red-800"
+                            : "bg-stone-100 text-stone-600"
+                }`}>
+                  {statusLabels[order.status] ?? order.status}
+                </span>
                 <select
                   value={order.status}
                   onChange={(e) => {
