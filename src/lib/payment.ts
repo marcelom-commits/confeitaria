@@ -23,6 +23,26 @@ export async function createMercadoPagoPreference(
   input: MercadoPagoPreferenceInput,
 ): Promise<MercadoPagoPreferenceResult> {
   const token = process.env.MERCADO_PAGO_ACCESS_TOKEN;
+
+  if (!token && input.paymentMethods === "pix") {
+    const pixKey = process.env.NEXT_PUBLIC_PIX_KEY ?? "nao definida";
+    const pixKeyType = process.env.NEXT_PUBLIC_PIX_KEY_TYPE ?? "telefone";
+    const pixReceiver = process.env.NEXT_PUBLIC_PIX_RECEIVER ?? "";
+    return {
+      id: `pix_${input.orderId}`,
+      initPoint: "",
+      isMock: true,
+      raw: {
+        method: "pix",
+        pixKey,
+        pixKeyType,
+        pixReceiver,
+        amount: input.amount,
+        orderId: input.orderId,
+      },
+    };
+  }
+
   if (!token) {
     const fakeId = `mp_mock_${randomUUID()}`;
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";

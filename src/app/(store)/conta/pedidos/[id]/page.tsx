@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
+import QRCode from "qrcode";
 
 import { formatPrice, orderStatusLabels, paymentStatusLabels } from "@/lib/format";
 import { requireUser } from "@/lib/access";
 import { prisma } from "@/lib/prisma";
+import { PixPaymentInfo } from "@/components/store/pix-payment-info";
 
 export const dynamic = "force-dynamic";
 
@@ -31,13 +33,19 @@ export default async function AccountOrderDetailPage(props: {
   const isPixPending =
     order.payment?.method === "pix" && order.payment?.status === "PENDING";
 
-  let paymentUrl: string | null = null;
+  let qrCodeDataUrl: string | null = null;
+  let pixKey = "";
+  let pixKeyType = "";
+  let pixReceiver = "";
   if (isPixPending) {
     const raw = order.payment?.rawResponse as Record<string, unknown> | null;
-    paymentUrl = (raw?.initPoint as string | undefined) ?? null;
-    if (!paymentUrl) {
-      const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-      paymentUrl = `${baseUrl}/api/payments/mock-callback?orderId=${order.id}`;
+    pixKey = (raw?.pixKey as string) ?? process.env.NEXT_PUBLIC_PIX_KEY ?? "";
+    pixKeyType = (raw?.pixKeyType as string) ?? process.env.NEXT_PUBLIC_PIX_KEY_TYPE ?? "telefone";
+    pixReceiver = (raw?.pixReceiver as string) ?? process.env.NEXT_PUBLIC_PIX_RECEIVER ?? "";
+    try {
+      qrCodeDataUrl = await QRCode.toDataURL(pixKey, { width: 300, margin: 2 });
+    } catch {
+      qrCodeDataUrl = null;
     }
   }
 
@@ -62,13 +70,14 @@ export default async function AccountOrderDetailPage(props: {
             {paymentStatusLabels[order.payment?.status ?? ""] ?? order.payment?.status ?? "Pendente"}
           </span>
         </p>
-        {paymentUrl ? (
-          <a
-            href={paymentUrl}
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-medium text-white hover:bg-green-700"
-          >
-            Pagar com PIX
-          </a>
+        {isPixPending ? (
+          <PixPaymentInfo
+            pixKey={pixKey}
+            pixKeyType={pixKeyType}
+            pixReceiver={pixReceiver}
+            amount={Number(order.total)}
+            qrCodeDataUrl={qrCodeDataUrl}
+          />
         ) : null}
       </section>
 
