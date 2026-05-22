@@ -2,6 +2,8 @@ import Link from "next/link";
 import { cookies } from "next/headers";
 
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
+import { HeaderUserMenu } from "./header-user-menu";
 
 const navigation = [
   { href: "/#categorias", label: "Categorias" },
@@ -28,6 +30,7 @@ async function getCartItemCount(): Promise<number> {
 }
 
 export async function Header() {
+  const session = await auth();
   const cartCount = await getCartItemCount();
 
   return (
@@ -46,30 +49,41 @@ export async function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-stone-600 transition hover:text-rose-700"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navigation
+            .filter((item) => item.href !== "/admin" || session?.user?.role === "ADMIN")
+            .map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-stone-600 transition hover:text-rose-700"
+              >
+                {item.label}
+              </Link>
+            ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/login"
-            className="hidden rounded-full px-4 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100 sm:inline-flex"
-          >
-            Entrar
-          </Link>
-          <Link
-            href="/cadastro"
-            className="hidden rounded-full border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 transition hover:border-rose-600 hover:text-rose-700 sm:inline-flex"
-          >
-            Cadastrar
-          </Link>
+          {session?.user ? (
+            <HeaderUserMenu
+              userName={session.user.name}
+              role={session.user.role ?? "CUSTOMER"}
+            />
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="hidden rounded-full px-4 py-2 text-sm font-medium text-stone-700 transition hover:bg-stone-100 sm:inline-flex"
+              >
+                Entrar
+              </Link>
+              <Link
+                href="/cadastro"
+                className="hidden rounded-full border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 transition hover:border-rose-600 hover:text-rose-700 sm:inline-flex"
+              >
+                Cadastrar
+              </Link>
+            </>
+          )}
           <Link
             href="/carrinho"
             className="inline-flex items-center gap-2 rounded-full bg-stone-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-rose-700"
