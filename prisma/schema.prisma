@@ -289,6 +289,14 @@ model Session {
   @@id([sessionToken])
 }
 
+model StoreSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model VerificationToken {
   identifier String
   token      String

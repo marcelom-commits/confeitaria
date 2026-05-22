@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { formatPrice } from "@/lib/format";
 import { ShippingTokensAdmin } from "@/components/admin/shipping-tokens-admin";
+import { PixSettingsAdmin } from "@/components/admin/pix-settings-admin";
 
 export const dynamic = "force-dynamic";
 
@@ -53,6 +54,8 @@ export default async function AdminDashboardPage() {
           </p>
         </article>
       </section>
+
+      <PixSettingsAdmin />
 
       <ShippingTokensAdmin
         initialTokens={shippingTokens.map((t) => ({

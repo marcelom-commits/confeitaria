@@ -6,6 +6,7 @@ import { requireUser } from "@/lib/access";
 import { prisma } from "@/lib/prisma";
 import { PixPaymentInfo } from "@/components/store/pix-payment-info";
 import { buildPixBRCode } from "@/lib/pix-brcode";
+import { getPixSettings } from "@/lib/store-settings";
 
 export const dynamic = "force-dynamic";
 
@@ -41,9 +42,10 @@ export default async function AccountOrderDetailPage(props: {
   let pixBRCode = "";
   if (isPixPending) {
     const raw = order.payment?.rawResponse as Record<string, unknown> | null;
-    pixKey = (raw?.pixKey as string) ?? process.env.NEXT_PUBLIC_PIX_KEY ?? "";
-    pixKeyType = (raw?.pixKeyType as string) ?? process.env.NEXT_PUBLIC_PIX_KEY_TYPE ?? "telefone";
-    pixReceiver = (raw?.pixReceiver as string) ?? process.env.NEXT_PUBLIC_PIX_RECEIVER ?? "";
+    const dbSettings = await getPixSettings();
+    pixKey = dbSettings.pixKey;
+    pixKeyType = dbSettings.pixKeyType;
+    pixReceiver = dbSettings.pixReceiver;
     const amount = Number(order.total);
     try {
       pixBRCode = buildPixBRCode({
