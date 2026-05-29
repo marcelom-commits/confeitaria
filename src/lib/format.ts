@@ -1,3 +1,7 @@
+export function formatOrderNumber(orderNumber: number | null | undefined): string {
+  return `#${String(orderNumber ?? 0).padStart(5, "0")}`;
+}
+
 export function formatPrice(value: number) {
   return new Intl.NumberFormat("pt-BR", {
     style: "currency",

@@ -10,6 +10,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       ok: true,
       orderId: result.order.id,
+      orderNumber: result.order.orderNumber,
       totals: result.totals,
       payment: {
         preferenceId: result.paymentPreference.id,

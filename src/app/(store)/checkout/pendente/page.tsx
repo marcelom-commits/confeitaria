@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import QRCode from "qrcode";
 
 import { prisma } from "@/lib/prisma";
+import { formatOrderNumber } from "@/lib/format";
 import { PixPaymentInfo } from "@/components/store/pix-payment-info";
 import { buildPixBRCode } from "@/lib/pix-brcode";
 import { getPixSettings } from "@/lib/store-settings";
@@ -80,7 +81,7 @@ export default async function CheckoutPendingPage(props: {
             aguardando pagamento
           </p>
           <h1 className="mt-4 font-serif text-4xl text-stone-900">
-            Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
+            Pedido {formatOrderNumber(order.orderNumber)}
           </h1>
           <p className="mt-3 text-sm text-stone-600">
             Pague com PIX abaixo para confirmar seu pedido.

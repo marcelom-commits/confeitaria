@@ -1,15 +1,14 @@
+import { formatOrderNumber } from "@/lib/format";
+
 export const dynamic = "force-dynamic";
 
 export default async function CheckoutSuccessPage(props: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const searchParams = await props.searchParams;
-  const paymentId = Array.isArray(searchParams.payment_id)
-    ? searchParams.payment_id[0]
-    : searchParams.payment_id;
-  const orderId = Array.isArray(searchParams.orderId)
-    ? searchParams.orderId[0]
-    : searchParams.orderId;
+  const orderNumber = Array.isArray(searchParams.orderNumber)
+    ? searchParams.orderNumber[0]
+    : searchParams.orderNumber;
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#fffaf6] px-6">
@@ -24,8 +23,7 @@ export default async function CheckoutSuccessPage(props: {
           Seu pagamento foi processado. Voce recebera atualizacoes por e-mail.
         </p>
         <div className="mt-6 space-y-2 text-sm text-stone-700">
-          {orderId ? <p>Pedido: {orderId}</p> : null}
-          {paymentId ? <p>Pagamento: {paymentId}</p> : null}
+          {orderNumber ? <p>Pedido {formatOrderNumber(Number(orderNumber))}</p> : null}
         </div>
       </div>
     </main>

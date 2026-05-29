@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, formatOrderNumber } from "@/lib/format";
 
 type Row = {
   orderNumber: number;
@@ -186,7 +186,7 @@ export function RevenueReport() {
               <tbody>
                 {rows.map((r) => (
                   <tr key={r.orderNumber} className="border-b border-stone-100">
-                    <td className="py-2 pr-3 font-medium text-stone-900">#{r.orderNumber}</td>
+                    <td className="py-2 pr-3 font-medium text-stone-900">{formatOrderNumber(r.orderNumber)}</td>
                     <td className="py-2 pr-3 text-stone-600">
                       {new Date(r.date).toLocaleDateString("pt-BR")}
                     </td>

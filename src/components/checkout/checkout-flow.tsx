@@ -187,6 +187,7 @@ export function CheckoutFlow({ items, subtotal }: Props) {
         ok: boolean;
         message?: string;
         orderId?: string;
+        orderNumber?: number;
         payment?: { initPoint?: string };
       };
       if (!response.ok || !data.ok) {
@@ -197,10 +198,10 @@ export function CheckoutFlow({ items, subtotal }: Props) {
         return;
       }
       if (paymentMethod === "pix" && data.orderId) {
-        window.location.href = `/checkout/pendente?orderId=${data.orderId}`;
+        window.location.href = `/checkout/pendente?orderId=${data.orderId}&orderNumber=${data.orderNumber ?? ""}`;
         return;
       }
-      window.location.href = `/checkout/sucesso?orderId=${data.orderId ?? ""}`;
+      window.location.href = `/checkout/sucesso?orderId=${data.orderId ?? ""}&orderNumber=${data.orderNumber ?? ""}`;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Erro inesperado.");
     } finally {

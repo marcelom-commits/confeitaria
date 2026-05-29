@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import QRCode from "qrcode";
 
-import { formatPrice, orderStatusLabels, paymentStatusLabels } from "@/lib/format";
+import { formatPrice, formatOrderNumber, orderStatusLabels, paymentStatusLabels } from "@/lib/format";
 import { requireUser } from "@/lib/access";
 import { prisma } from "@/lib/prisma";
 import { PixPaymentInfo } from "@/components/store/pix-payment-info";
@@ -67,7 +67,7 @@ export default async function AccountOrderDetailPage(props: {
           pedido
         </p>
         <h1 className="mt-3 font-serif text-4xl text-stone-900">
-          Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
+          Pedido {formatOrderNumber(order.orderNumber)}
         </h1>
       </header>
 

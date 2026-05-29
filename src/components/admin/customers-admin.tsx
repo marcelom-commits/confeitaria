@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-import { formatPrice, orderStatusLabels } from "@/lib/format";
+import { formatPrice, formatOrderNumber, orderStatusLabels } from "@/lib/format";
 
 type Customer = {
   id: string;
@@ -137,7 +137,7 @@ export function CustomersAdmin({ customers }: Props) {
                           href={`/admin/pedidos?orderId=${order.id}`}
                           className="text-stone-700 hover:text-rose-700 hover:underline"
                         >
-                          #{String(order.orderNumber ?? 0).padStart(5, "0")}
+                          {formatOrderNumber(order.orderNumber)}
                         </Link>
                         <span className="text-stone-500"> · {orderStatusLabels[order.status] ?? order.status}</span>
                         <span className={`font-semibold ${order.status === "CANCELED" ? "text-red-600 line-through" : "text-stone-900"}`}>

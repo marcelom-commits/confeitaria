@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { formatPrice, orderStatusLabels } from "@/lib/format";
+import { formatPrice, formatOrderNumber, orderStatusLabels } from "@/lib/format";
 import { getCustomerAccountData } from "@/lib/account";
 import { requireUser } from "@/lib/access";
 
@@ -40,7 +40,7 @@ export default async function AccountOrdersPage() {
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <p className="font-semibold text-stone-900">
-                    Pedido #{String(order.orderNumber ?? 0).padStart(5, "0")}
+                    Pedido {formatOrderNumber(order.orderNumber)}
                   </p>
                   <p className="text-sm text-stone-600">
                     Status: {orderStatusLabels[order.status] ?? order.status} ·{" "}

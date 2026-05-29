@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-import { formatPrice, orderStatusLabels, paymentStatusLabels, shipmentStatusLabels } from "@/lib/format";
+import { formatPrice, formatOrderNumber, orderStatusLabels, paymentStatusLabels, shipmentStatusLabels } from "@/lib/format";
 
 type Order = {
   id: string;
@@ -163,7 +163,7 @@ export function OrdersAdmin({ initialOrders }: Props) {
               >
                 <div className="flex-1">
                   <p className="font-semibold text-stone-900">
-                    Pedido #{String(order.orderNumber ?? index + 1).padStart(5, "0")}
+                    Pedido {formatOrderNumber(order.orderNumber)}
                   </p>
                   <p className="text-sm text-stone-600">
                     {order.user?.name ?? "Cliente"} · {order.user?.email ?? "sem email"}
