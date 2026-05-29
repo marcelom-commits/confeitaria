@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   ]);
 
   const revenueRows = await prisma.order.findMany({
-    where: { ...where, status: { in: ["PAID", "DELIVERED"] } },
+    where: { ...where, status: { in: ["PAID", "SHIPPED", "DELIVERED"] } },
     select: { total: true },
   });
   const revenue = revenueRows.reduce((acc, o) => acc + Number(o.total), 0);
