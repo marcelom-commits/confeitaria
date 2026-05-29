@@ -42,7 +42,7 @@ export function MercadoPagoSettingsAdmin() {
     <section className="rounded-2xl border border-stone-200 p-5">
       <h2 className="font-serif text-2xl text-stone-900">Mercado Pago</h2>
       <p className="mt-1 text-sm text-stone-500">
-        Access Token usado para processar pagamentos com cartão, boleto e PIX via Mercado Pago.
+        Access Token usado para processar pagamentos com cartão via Mercado Pago.
       </p>
 
       <div className="mt-4 space-y-3">

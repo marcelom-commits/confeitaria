@@ -368,11 +368,10 @@ export function CheckoutFlow({ items, subtotal }: Props) {
           <p className="text-sm text-stone-600">
             Selecione a forma de pagamento.
           </p>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2">
             {[
               { value: "pix", label: "Pix" },
               { value: "card", label: "Cartao" },
-              { value: "boleto", label: "Boleto" },
             ].map((opt) => (
               <label
                 key={opt.value}
