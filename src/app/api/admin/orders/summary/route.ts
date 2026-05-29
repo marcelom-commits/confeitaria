@@ -25,19 +25,11 @@ export async function GET(request: NextRequest) {
     prisma.order.count({ where: { ...where, status: "PENDING" } }),
   ]);
 
-  const [revenueRows, canceledRows] = await Promise.all([
-    prisma.order.findMany({
-      where: { ...where, status: { in: ["PAID", "DELIVERED"] } },
-      select: { total: true },
-    }),
-    prisma.order.findMany({
-      where: { ...where, status: "CANCELED" },
-      select: { total: true },
-    }),
-  ]);
-  const revenue =
-    revenueRows.reduce((acc, o) => acc + Number(o.total), 0) -
-    canceledRows.reduce((acc, o) => acc + Number(o.total), 0);
+  const revenueRows = await prisma.order.findMany({
+    where: { ...where, status: { in: ["PAID", "DELIVERED"] } },
+    select: { total: true },
+  });
+  const revenue = revenueRows.reduce((acc, o) => acc + Number(o.total), 0);
 
   return NextResponse.json({ total, paid, delivered, shipped, canceled, pending, revenue });
 }
