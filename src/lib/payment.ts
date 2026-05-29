@@ -23,9 +23,7 @@ type MercadoPagoPreferenceResult = {
 export async function createMercadoPagoPreference(
   input: MercadoPagoPreferenceInput,
 ): Promise<MercadoPagoPreferenceResult> {
-  const token = await getMercadoPagoToken();
-
-  if (!token && input.paymentMethods === "pix") {
+  if (input.paymentMethods === "pix") {
     const pixSettings = await getPixSettings();
     const pixKey = pixSettings.pixKey || "nao definida";
     const pixKeyType = pixSettings.pixKeyType;
@@ -45,6 +43,8 @@ export async function createMercadoPagoPreference(
     };
   }
 
+  const token = await getMercadoPagoToken();
+
   if (!token) {
     const fakeId = `mp_mock_${randomUUID()}`;
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
@@ -57,9 +57,7 @@ export async function createMercadoPagoPreference(
   }
 
   const excludedPaymentTypes: Array<{ id: string }> = [];
-  if (input.paymentMethods === "pix") {
-    excludedPaymentTypes.push({ id: "ticket" }, { id: "credit_card" }, { id: "debit_card" });
-  } else if (input.paymentMethods === "card") {
+  if (input.paymentMethods === "card") {
     excludedPaymentTypes.push({ id: "bank_transfer" }, { id: "ticket" });
   } else if (input.paymentMethods === "boleto") {
     excludedPaymentTypes.push({ id: "bank_transfer" }, { id: "credit_card" }, { id: "debit_card" });
