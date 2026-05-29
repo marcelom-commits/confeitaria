@@ -66,6 +66,9 @@ export function OrdersSummary() {
 
   useEffect(() => {
     fetchSummary();
+    const handler = () => fetchSummary();
+    window.addEventListener("order-updated", handler);
+    return () => window.removeEventListener("order-updated", handler);
   }, [fetchSummary]);
 
   const cards = useMemo(

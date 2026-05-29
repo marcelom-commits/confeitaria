@@ -116,6 +116,7 @@ export function OrdersAdmin({ initialOrders }: Props) {
       ),
     );
     setMessage("Status atualizado.");
+    window.dispatchEvent(new CustomEvent("order-updated"));
   }
 
   return (
