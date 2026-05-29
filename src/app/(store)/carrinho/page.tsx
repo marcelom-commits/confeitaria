@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { CartContent } from "@/components/store/cart-content";
 import { getCartTotals, getOrCreateCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Carrinho",
+  description: "Revise os itens do seu carrinho na Doce Encanto antes de finalizar o pedido.",
+};
 
 export default async function CartPage() {
   const cart = await getOrCreateCart();

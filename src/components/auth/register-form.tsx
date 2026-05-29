@@ -61,7 +61,8 @@ export function RegisterForm() {
       />
       <input
         name="phone"
-        placeholder="Telefone (opcional)"
+        required
+        placeholder="Telefone"
         className="w-full rounded-xl border border-stone-300 px-4 py-3"
       />
       {message ? <p className="text-sm text-stone-700">{message}</p> : null}

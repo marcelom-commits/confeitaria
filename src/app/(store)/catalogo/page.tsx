@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ProductCard } from "@/components/store/product-card";
 import { SectionHeading } from "@/components/store/section-heading";
 import { formatPrice } from "@/lib/format";
@@ -5,6 +6,19 @@ import { getCatalogProducts } from "@/lib/products";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata(
+  props: { searchParams: Promise<{ categoria?: string }> },
+): Promise<Metadata> {
+  const searchParams = await props.searchParams;
+  const category = searchParams.categoria;
+  return {
+    title: category ? `Catálogo - ${category}` : "Catálogo Completo",
+    description: category
+      ? `Confira nossos produtos na categoria ${category}`
+      : "Veja todos os produtos disponíveis na Doce Encanto.",
+  };
+}
 
 export default async function CatalogPage(props: {
   searchParams: Promise<{ categoria?: string }>;

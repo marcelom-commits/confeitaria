@@ -6,7 +6,7 @@ type RegisterInput = {
   name: string;
   email: string;
   password: string;
-  phone?: string;
+  phone: string;
 };
 
 export async function registerCustomer(input: RegisterInput) {

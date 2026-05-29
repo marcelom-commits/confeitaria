@@ -155,6 +155,7 @@ export function ProductsAdmin({ initialProducts, categories }: Props) {
   }
 
   async function inactivateProduct(id: string) {
+    if (!window.confirm("Tem certeza que deseja inativar este produto?")) return;
     setLoading(true);
     setMessage(null);
     const response = await fetch(`/api/admin/products/${id}`, {

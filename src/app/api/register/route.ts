@@ -7,7 +7,7 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   password: z.string().min(6),
-  phone: z.string().optional(),
+  phone: z.string().min(1, "Telefone é obrigatório."),
 });
 
 export async function POST(request: NextRequest) {

@@ -15,31 +15,55 @@ export default async function AdminOrdersPage() {
   });
 
   const serialized = orders.map((order) => ({
-    ...order,
+    id: order.id,
+    orderNumber: order.orderNumber,
+    status: order.status,
     subtotal: Number(order.subtotal),
     shippingCost: Number(order.shippingCost),
     total: Number(order.total),
+    notes: order.notes,
+    recipientName: order.recipientName,
+    street: order.street,
+    number: order.number,
+    complement: order.complement,
+    district: order.district,
+    city: order.city,
+    state: order.state,
+    zipCode: order.zipCode,
+    createdAt: order.createdAt.toISOString(),
+    user: order.user ? { id: order.user.id, name: order.user.name, email: order.user.email } : null,
     items: order.items.map((item) => ({
-      ...item,
+      id: item.id,
+      productName: item.productName,
+      quantity: item.quantity,
       unitPrice: Number(item.unitPrice),
       totalPrice: Number(item.totalPrice),
     })),
     payment: order.payment
-      ? { ...order.payment, amount: Number(order.payment.amount) }
+      ? {
+          id: order.payment.id,
+          method: order.payment.method,
+          status: order.payment.status,
+          amount: Number(order.payment.amount),
+          gateway: order.payment.gateway,
+          paidAt: order.payment.paidAt?.toISOString() ?? null,
+        }
       : null,
     shipment: order.shipment
-      ? { ...order.shipment, shippingCost: Number(order.shipment.shippingCost) }
+      ? {
+          id: order.shipment.id,
+          shippingMethod: order.shipment.shippingMethod,
+          carrier: order.shipment.carrier,
+          status: order.shipment.status,
+          trackingCode: order.shipment.trackingCode,
+          shippingCost: Number(order.shipment.shippingCost),
+          estimatedDays: order.shipment.estimatedDays,
+        }
       : null,
   }));
 
   return (
     <div className="space-y-4">
-      <header>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-700">
-          admin
-        </p>
-        <h1 className="mt-3 font-serif text-4xl text-stone-900">Pedidos</h1>
-      </header>
       <OrdersAdmin initialOrders={serialized} />
     </div>
   );

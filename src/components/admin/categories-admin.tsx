@@ -125,6 +125,7 @@ export function CategoriesAdmin({ initialCategories }: Props) {
   }
 
   async function inactivateCategory(id: string) {
+    if (!window.confirm("Tem certeza que deseja inativar esta categoria?")) return;
     setLoading(true);
     setMessage(null);
     const response = await fetch(`/api/admin/categories/${id}`, {

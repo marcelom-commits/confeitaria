@@ -35,3 +35,36 @@ export async function upsertPixSettings(settings: PixSettings): Promise<void> {
     });
   }
 }
+
+export type WhatsAppSettings = {
+  phone: string;
+  message: string;
+};
+
+export async function getWhatsAppSettings(): Promise<WhatsAppSettings> {
+  const rows = await prisma.storeSetting.findMany({
+    where: { key: { in: ["whatsappPhone", "whatsappMessage"] } },
+  });
+
+  const map = new Map(rows.map((r) => [r.key, r.value]));
+
+  return {
+    phone: map.get("whatsappPhone") ?? process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "556199999999",
+    message: map.get("whatsappMessage") ?? process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ?? "Olá! Gostaria de saber mais sobre os produtos da Doce Encanto.",
+  };
+}
+
+export async function upsertWhatsAppSettings(settings: WhatsAppSettings): Promise<void> {
+  const entries = [
+    { key: "whatsappPhone", value: settings.phone },
+    { key: "whatsappMessage", value: settings.message },
+  ];
+
+  for (const entry of entries) {
+    await prisma.storeSetting.upsert({
+      where: { key: entry.key },
+      update: { value: entry.value },
+      create: { key: entry.key, value: entry.value },
+    });
+  }
+}

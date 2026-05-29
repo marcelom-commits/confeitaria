@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AddToCartButton } from "./add-to-cart-button";
 
 type ProductCardProps = {
@@ -19,10 +20,15 @@ export function ProductCard({
 }: ProductCardProps) {
   return (
     <article className="overflow-hidden rounded-[2rem] border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-      <div
-        className="h-72 bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-      />
+      <div className="relative h-72">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+        />
+      </div>
       <div className="space-y-4 p-6">
         <div className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-rose-700">

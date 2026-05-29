@@ -34,12 +34,6 @@ export default async function AdminCustomersPage() {
 
   return (
     <div className="space-y-4">
-      <header>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-700">
-          admin
-        </p>
-        <h1 className="mt-3 font-serif text-4xl text-stone-900">Clientes</h1>
-      </header>
       <CustomersAdmin customers={customers} />
     </div>
   );

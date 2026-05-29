@@ -20,3 +20,11 @@ export const paymentStatusLabels: Record<string, string> = {
   REJECTED: "Rejeitado",
   REFUNDED: "Reembolsado",
 };
+
+export const shipmentStatusLabels: Record<string, string> = {
+  PENDING: "Pendente",
+  READY_TO_SHIP: "Pronto para envio",
+  SHIPPED: "Enviado",
+  DELIVERED: "Entregue",
+  RETURNED: "Devolvido",
+};

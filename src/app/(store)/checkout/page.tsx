@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { CheckoutFlow } from "@/components/checkout/checkout-flow";
 import { getOrCreateCart } from "@/lib/cart";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Finalizar Pedido",
+  description: "Informe seus dados, endereço e forma de pagamento para concluir sua compra.",
+};
 
 export default async function CheckoutPage() {
   const cart = await getOrCreateCart();

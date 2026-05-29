@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
-import { formatPrice } from "@/lib/format";
+import { formatPrice, orderStatusLabels } from "@/lib/format";
 
 type Customer = {
   id: string;
@@ -26,6 +27,7 @@ type Customer = {
     }[];
     orders: {
       id: string;
+      orderNumber: number;
       status: string;
       total: number | { toString(): string };
       createdAt: string | Date;
@@ -33,6 +35,7 @@ type Customer = {
   } | null;
   orders: {
     id: string;
+    orderNumber: number;
     status: string;
     total: number | { toString(): string };
     createdAt: string | Date;
@@ -74,10 +77,9 @@ export function CustomersAdmin({ customers }: Props) {
           const orders = customer.customerProfile?.orders?.length
             ? customer.customerProfile.orders
             : customer.orders;
-          const totalSpent = orders.reduce(
-            (acc, order) => acc + Number(order.total),
-            0,
-          );
+          const totalSpent = orders
+            .filter((o) => o.status !== "CANCELED")
+            .reduce((acc, order) => acc + Number(order.total), 0);
           const defaultAddress = customer.customerProfile?.addresses.find(
             (addr) => addr.isDefault,
           );
@@ -85,7 +87,7 @@ export function CustomersAdmin({ customers }: Props) {
           return (
             <article
               key={customer.id}
-              className="rounded-2xl border border-stone-200 p-5"
+              className="rounded-2xl border border-stone-200 bg-stone-100 p-5"
             >
               <div className="grid gap-4 lg:grid-cols-[1fr_auto]">
                 <div>
@@ -126,15 +128,19 @@ export function CustomersAdmin({ customers }: Props) {
                     Historico de pedidos
                   </p>
                   <div className="mt-2 space-y-2">
-                    {orders.slice(0, 5).map((order) => (
+                    {orders.map((order) => (
                       <div
                         key={order.id}
                         className="flex items-center justify-between text-sm"
                       >
-                        <span className="text-stone-700">
-                          {order.id.slice(0, 8)} · {order.status}
-                        </span>
-                        <span className="font-semibold text-stone-900">
+                        <Link
+                          href={`/admin/pedidos?orderId=${order.id}`}
+                          className="text-stone-700 hover:text-rose-700 hover:underline"
+                        >
+                          #{String(order.orderNumber ?? 0).padStart(5, "0")}
+                        </Link>
+                        <span className="text-stone-500"> · {orderStatusLabels[order.status] ?? order.status}</span>
+                        <span className={`font-semibold ${order.status === "CANCELED" ? "text-red-600 line-through" : "text-stone-900"}`}>
                           {formatPrice(Number(order.total))}
                         </span>
                       </div>
