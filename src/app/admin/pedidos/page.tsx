@@ -1,4 +1,5 @@
 import { OrdersAdmin } from "@/components/admin/orders-admin";
+import { OrdersSummary } from "@/components/admin/orders-summary";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
@@ -63,7 +64,8 @@ export default async function AdminOrdersPage() {
   }));
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
+      <OrdersSummary />
       <OrdersAdmin initialOrders={serialized} />
     </div>
   );
