@@ -74,6 +74,7 @@ export function OrdersSummary() {
   const cards = useMemo(
     () => [
       { label: "Pagos", value: data?.paid ?? 0, color: "text-green-700" },
+      { label: "Enviados", value: data?.shipped ?? 0, color: "text-purple-700" },
       { label: "Entregues", value: data?.delivered ?? 0, color: "text-emerald-700" },
       { label: "Pendentes", value: data?.pending ?? 0, color: "text-orange-700" },
       { label: "Cancelados", value: data?.canceled ?? 0, color: "text-red-700" },
