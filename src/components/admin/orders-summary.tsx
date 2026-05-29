@@ -7,6 +7,7 @@ type SummaryData = {
   total: number;
   paid: number;
   delivered: number;
+  shipped: number;
   canceled: number;
   pending: number;
   revenue: number;
