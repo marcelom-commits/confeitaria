@@ -3,6 +3,7 @@ import { formatPrice } from "@/lib/format";
 import { ShippingTokensAdmin } from "@/components/admin/shipping-tokens-admin";
 import { PixSettingsAdmin } from "@/components/admin/pix-settings-admin";
 import { WhatsAppSettingsAdmin } from "@/components/admin/whatsapp-settings-admin";
+import { MercadoPagoSettingsAdmin } from "@/components/admin/mercado-pago-settings-admin";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +60,8 @@ export default async function AdminDashboardPage() {
       <PixSettingsAdmin />
 
       <WhatsAppSettingsAdmin />
+
+      <MercadoPagoSettingsAdmin />
 
       <ShippingTokensAdmin
         initialTokens={shippingTokens.map((t) => ({

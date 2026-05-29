@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { OrderStatus, PaymentStatus } from "@prisma/client";
 
 import { prisma } from "@/lib/prisma";
+import { getMercadoPagoToken } from "@/lib/store-settings";
 
 async function getPaymentDetails(paymentId: string) {
-  const token = process.env.MERCADO_PAGO_ACCESS_TOKEN;
+  const token = await getMercadoPagoToken();
   if (!token) return null;
 
   try {

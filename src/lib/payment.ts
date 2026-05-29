@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { getPixSettings } from "@/lib/store-settings";
+import { getMercadoPagoToken, getPixSettings } from "@/lib/store-settings";
 
 type MercadoPagoPreferenceInput = {
   orderId: string;
@@ -23,7 +23,7 @@ type MercadoPagoPreferenceResult = {
 export async function createMercadoPagoPreference(
   input: MercadoPagoPreferenceInput,
 ): Promise<MercadoPagoPreferenceResult> {
-  const token = process.env.MERCADO_PAGO_ACCESS_TOKEN;
+  const token = await getMercadoPagoToken();
 
   if (!token && input.paymentMethods === "pix") {
     const pixSettings = await getPixSettings();

@@ -68,3 +68,18 @@ export async function upsertWhatsAppSettings(settings: WhatsAppSettings): Promis
     });
   }
 }
+
+export async function getMercadoPagoToken(): Promise<string> {
+  const row = await prisma.storeSetting.findUnique({
+    where: { key: "mercadoPagoAccessToken" },
+  });
+  return row?.value ?? process.env.MERCADO_PAGO_ACCESS_TOKEN ?? "";
+}
+
+export async function upsertMercadoPagoToken(token: string): Promise<void> {
+  await prisma.storeSetting.upsert({
+    where: { key: "mercadoPagoAccessToken" },
+    update: { value: token },
+    create: { key: "mercadoPagoAccessToken", value: token },
+  });
+}
