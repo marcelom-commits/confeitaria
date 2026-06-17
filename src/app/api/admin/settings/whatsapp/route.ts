@@ -17,8 +17,8 @@ export async function PUT(request: NextRequest) {
   const body = (await request.json()) as {
     phone?: string;
     message?: string;
-    apiToken?: string;
-    phoneId?: string;
+    zapiInstanceId?: string;
+    zapiToken?: string;
   };
 
   const current = await getWhatsAppSettings();
@@ -26,8 +26,8 @@ export async function PUT(request: NextRequest) {
   await upsertWhatsAppSettings({
     phone: body.phone ?? current.phone,
     message: body.message ?? current.message,
-    apiToken: body.apiToken ?? current.apiToken,
-    phoneId: body.phoneId ?? current.phoneId,
+    zapiInstanceId: body.zapiInstanceId ?? current.zapiInstanceId,
+    zapiToken: body.zapiToken ?? current.zapiToken,
   });
 
   return NextResponse.json({ ok: true });

@@ -5,16 +5,16 @@ import { useCallback, useEffect, useState } from "react";
 type WhatsAppData = {
   phone: string;
   message: string;
-  apiToken: string;
-  phoneId: string;
+  zapiInstanceId: string;
+  zapiToken: string;
 };
 
 export function WhatsAppSettingsAdmin() {
   const [data, setData] = useState<WhatsAppData>({
     phone: "",
     message: "",
-    apiToken: "",
-    phoneId: "",
+    zapiInstanceId: "",
+    zapiToken: "",
   });
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -86,35 +86,35 @@ export function WhatsAppSettingsAdmin() {
 
         <details className="rounded-xl border border-stone-200">
           <summary className="cursor-pointer px-4 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-stone-500 hover:text-stone-700">
-            Configuração da API de Notificação
+            Configuração da API de Notificação (Z-API)
           </summary>
           <div className="space-y-3 border-t border-stone-200 p-4">
             <p className="text-xs text-stone-400">
-              Para enviar notificações automáticas de status de pedidos, configure a
-              WhatsApp Cloud API (Meta). Deixe em branco para usar apenas o botão
+              Para enviar notificações automáticas de status de pedidos, configure
+              sua instância do Z-API. Deixe em branco para usar apenas o botão
               flutuante.
             </p>
             <div>
               <label className="text-xs font-semibold uppercase tracking-[0.1em] text-stone-500">
-                Token de Acesso (WhatsApp API)
+                Instance ID (Z-API)
               </label>
               <input
-                type="password"
-                value={data.apiToken}
-                onChange={(e) => setData({ ...data, apiToken: e.target.value })}
-                placeholder="EAAT..."
+                type="text"
+                value={data.zapiInstanceId}
+                onChange={(e) => setData({ ...data, zapiInstanceId: e.target.value })}
+                placeholder="3A7B9C1D2E4F..."
                 className="mt-1 w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
               />
             </div>
             <div>
               <label className="text-xs font-semibold uppercase tracking-[0.1em] text-stone-500">
-                Phone Number ID
+                Token (Z-API)
               </label>
               <input
-                type="text"
-                value={data.phoneId}
-                onChange={(e) => setData({ ...data, phoneId: e.target.value })}
-                placeholder="123456789012345"
+                type="password"
+                value={data.zapiToken}
+                onChange={(e) => setData({ ...data, zapiToken: e.target.value })}
+                placeholder="seu-token-zapi"
                 className="mt-1 w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
               />
             </div>
