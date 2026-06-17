@@ -7,39 +7,44 @@ type SendWhatsAppInput = {
 };
 
 async function sendWhatsAppMessage(input: SendWhatsAppInput) {
-  const [instanceRow, tokenRow] = await Promise.all([
-    prisma.storeSetting.findUnique({ where: { key: "zapiInstanceId" } }),
-    prisma.storeSetting.findUnique({ where: { key: "zapiToken" } }),
+  const [tokenRow, phoneIdRow] = await Promise.all([
+    prisma.storeSetting.findUnique({ where: { key: "whatsappApiToken" } }),
+    prisma.storeSetting.findUnique({ where: { key: "whatsappPhoneId" } }),
   ]);
 
-  const instanceId = instanceRow?.value ?? process.env.ZAPI_INSTANCE_ID ?? "";
-  const token = tokenRow?.value ?? process.env.ZAPI_TOKEN ?? "";
+  const token = tokenRow?.value ?? process.env.WHATSAPP_API_TOKEN ?? "";
+  const phoneId = phoneIdRow?.value ?? process.env.WHATSAPP_PHONE_ID ?? "";
 
-  if (!instanceId || !token) {
-    console.log("[zapi-mock] Z-API não configurada. Mensagem não enviada.");
-    console.log(`[zapi-mock] para=${input.to} | msg=${input.message}`);
+  if (!token || !phoneId) {
+    console.log("[whatsapp-mock] API não configurada. Mensagem não enviada.");
+    console.log(`[whatsapp-mock] para=${input.to} | msg=${input.message}`);
     return;
   }
 
   try {
     const response = await fetch(
-      `https://api.z-api.io/instances/${instanceId}/token/${token}/send-text`,
+      `https://graph.facebook.com/v21.0/${phoneId}/messages`,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-          phone: input.to.replace(/\D/g, ""),
-          message: input.message,
+          messaging_product: "whatsapp",
+          to: input.to.replace(/\D/g, ""),
+          type: "text",
+          text: { body: input.message },
         }),
       },
     );
 
     if (!response.ok) {
       const err = await response.text();
-      console.error("[zapi-error]", err);
+      console.error("[whatsapp-error]", err);
     }
   } catch (error) {
-    console.error("[zapi-error]", error);
+    console.error("[whatsapp-error]", error);
   }
 }
 
