@@ -1,7 +1,7 @@
 import { OrderStatus, PaymentStatus, Prisma } from "@prisma/client";
 import { auth } from "@/lib/auth";
 import { clearCart, getOrCreateCart } from "@/lib/cart";
-import { sendOrderStatusEmail } from "@/lib/notification";
+import { sendOrderStatusWhatsApp } from "@/lib/notification";
 import { prisma } from "@/lib/prisma";
 import { getShippingOptionByRegion } from "@/lib/shipping";
 import { createMercadoPagoPreference } from "@/lib/payment";
@@ -285,19 +285,10 @@ export async function updateOrderFromMercadoPagoWebhook(input: {
     return { updatedPayment, updatedOrder };
   });
 
-  const orderUser = await prisma.user.findUnique({
-    where: { id: updated.updatedOrder.userId ?? "" },
-    select: { email: true },
+  await sendOrderStatusWhatsApp({
+    orderId: updated.updatedOrder.id,
+    status: updated.updatedOrder.status,
   });
-
-  if (orderUser?.email) {
-    await sendOrderStatusEmail({
-      orderId: updated.updatedOrder.id,
-      to: orderUser.email,
-      status: updated.updatedOrder.status,
-      amount: Number(updated.updatedOrder.total),
-    });
-  }
 
   return updated;
 }

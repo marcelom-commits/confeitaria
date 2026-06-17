@@ -39,11 +39,13 @@ export async function upsertPixSettings(settings: PixSettings): Promise<void> {
 export type WhatsAppSettings = {
   phone: string;
   message: string;
+  apiToken: string;
+  phoneId: string;
 };
 
 export async function getWhatsAppSettings(): Promise<WhatsAppSettings> {
   const rows = await prisma.storeSetting.findMany({
-    where: { key: { in: ["whatsappPhone", "whatsappMessage"] } },
+    where: { key: { in: ["whatsappPhone", "whatsappMessage", "whatsappApiToken", "whatsappPhoneId"] } },
   });
 
   const map = new Map(rows.map((r) => [r.key, r.value]));
@@ -51,6 +53,8 @@ export async function getWhatsAppSettings(): Promise<WhatsAppSettings> {
   return {
     phone: map.get("whatsappPhone") ?? process.env.NEXT_PUBLIC_WHATSAPP_PHONE ?? "556199999999",
     message: map.get("whatsappMessage") ?? process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ?? "Olá! Gostaria de saber mais sobre os produtos da Doce Encanto.",
+    apiToken: map.get("whatsappApiToken") ?? process.env.WHATSAPP_API_TOKEN ?? "",
+    phoneId: map.get("whatsappPhoneId") ?? process.env.WHATSAPP_PHONE_ID ?? "",
   };
 }
 
@@ -58,6 +62,8 @@ export async function upsertWhatsAppSettings(settings: WhatsAppSettings): Promis
   const entries = [
     { key: "whatsappPhone", value: settings.phone },
     { key: "whatsappMessage", value: settings.message },
+    { key: "whatsappApiToken", value: settings.apiToken },
+    { key: "whatsappPhoneId", value: settings.phoneId },
   ];
 
   for (const entry of entries) {

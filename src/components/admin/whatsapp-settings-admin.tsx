@@ -5,12 +5,16 @@ import { useCallback, useEffect, useState } from "react";
 type WhatsAppData = {
   phone: string;
   message: string;
+  apiToken: string;
+  phoneId: string;
 };
 
 export function WhatsAppSettingsAdmin() {
   const [data, setData] = useState<WhatsAppData>({
     phone: "",
     message: "",
+    apiToken: "",
+    phoneId: "",
   });
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -52,7 +56,7 @@ export function WhatsAppSettingsAdmin() {
     <section className="rounded-2xl border border-stone-200 p-5">
       <h2 className="font-serif text-2xl text-stone-900">WhatsApp</h2>
       <p className="mt-1 text-sm text-stone-500">
-        Número usado no ícone do WhatsApp no site.
+        Botão flutuante e notificações automáticas de pedidos.
       </p>
 
       <div className="mt-4 space-y-3">
@@ -79,6 +83,43 @@ export function WhatsAppSettingsAdmin() {
             className="mt-1 w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
           />
         </div>
+
+        <details className="rounded-xl border border-stone-200">
+          <summary className="cursor-pointer px-4 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-stone-500 hover:text-stone-700">
+            Configuração da API de Notificação
+          </summary>
+          <div className="space-y-3 border-t border-stone-200 p-4">
+            <p className="text-xs text-stone-400">
+              Para enviar notificações automáticas de status de pedidos, configure a
+              WhatsApp Cloud API (Meta). Deixe em branco para usar apenas o botão
+              flutuante.
+            </p>
+            <div>
+              <label className="text-xs font-semibold uppercase tracking-[0.1em] text-stone-500">
+                Token de Acesso (WhatsApp API)
+              </label>
+              <input
+                type="password"
+                value={data.apiToken}
+                onChange={(e) => setData({ ...data, apiToken: e.target.value })}
+                placeholder="EAAT..."
+                className="mt-1 w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold uppercase tracking-[0.1em] text-stone-500">
+                Phone Number ID
+              </label>
+              <input
+                type="text"
+                value={data.phoneId}
+                onChange={(e) => setData({ ...data, phoneId: e.target.value })}
+                placeholder="123456789012345"
+                className="mt-1 w-full rounded-xl border border-stone-300 px-4 py-2 text-sm"
+              />
+            </div>
+          </div>
+        </details>
 
         <div className="rounded-xl bg-stone-50 border border-stone-200 px-4 py-3 text-xs text-stone-500 break-all">
           Link gerado: {waUrl}

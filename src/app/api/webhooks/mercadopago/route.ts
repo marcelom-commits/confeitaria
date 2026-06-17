@@ -3,6 +3,7 @@ import { OrderStatus, PaymentStatus } from "@prisma/client";
 
 import { prisma } from "@/lib/prisma";
 import { getMercadoPagoToken } from "@/lib/store-settings";
+import { sendOrderStatusWhatsApp } from "@/lib/notification";
 
 async function getPaymentDetails(paymentId: string) {
   const token = await getMercadoPagoToken();
@@ -113,6 +114,11 @@ export async function POST(request: NextRequest) {
     await prisma.order.update({
       where: { id: orderId },
       data: { status: mappedOrderStatus },
+    });
+
+    await sendOrderStatusWhatsApp({
+      orderId,
+      status: mappedOrderStatus,
     });
 
     return NextResponse.json({ ok: true });

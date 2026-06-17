@@ -3,6 +3,7 @@ import { OrderStatus, PaymentStatus } from "@prisma/client";
 
 import { requireAdminApi } from "@/lib/access";
 import { prisma } from "@/lib/prisma";
+import { sendOrderStatusWhatsApp } from "@/lib/notification";
 
 export async function PUT(
   request: NextRequest,
@@ -33,6 +34,11 @@ export async function PUT(
         data: { status: paymentStatus },
       });
     }
+
+    await sendOrderStatusWhatsApp({
+      orderId: order.id,
+      status: nextStatus,
+    });
 
     return NextResponse.json({ ok: true, order });
   } catch (error) {
